@@ -1,0 +1,282 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\playwright.config.ts",
+    "rootDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\my-awesome-reporter.ts",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/janst/OneDrive/Documents/Expertkom/Expo/css/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.39.0",
+    "workers": 6,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "customerAddAdvice.spec.ts",
+      "file": "customerAddAdvice.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 23707,
+                  "error": {
+                    "message": "page.goto: net::ERR_CONNECTION_TIMED_OUT at http://172.16.17.100:8091/\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at http://172.16.17.100:8091/\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================\n    at C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts:4:14",
+                    "location": {
+                      "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                      "column": 14,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'customer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                        "column": 14,
+                        "line": 4
+                      },
+                      "message": "Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at http://172.16.17.100:8091/\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'customer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts:4:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T12:21:15.418Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\test-results\\customerAddAdvice-test-chromium\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                    "column": 14,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4f8c498957b04a3cebc-8d1a46bfba15b08e6773",
+          "file": "customerAddAdvice.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 21915,
+                  "error": {
+                    "message": "page.goto: NS_ERROR_NET_TIMEOUT\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: NS_ERROR_NET_TIMEOUT\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================\n    at C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts:4:14",
+                    "location": {
+                      "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                      "column": 14,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'customer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                        "column": 14,
+                        "line": 4
+                      },
+                      "message": "Error: page.goto: NS_ERROR_NET_TIMEOUT\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'customer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts:4:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T12:21:15.429Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\test-results\\customerAddAdvice-test-firefox\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                    "column": 14,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4f8c498957b04a3cebc-678c8e61ffec26066115",
+          "file": "customerAddAdvice.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 21447,
+                  "error": {
+                    "message": "page.goto: Timeout was reached\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================",
+                    "stack": "Error: page.goto: Timeout was reached\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================\n    at C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts:4:14",
+                    "location": {
+                      "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                      "column": 14,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'customer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                        "column": 14,
+                        "line": 4
+                      },
+                      "message": "Error: page.goto: Timeout was reached\n=========================== logs ===========================\nnavigating to \"http://172.16.17.100:8091/\", waiting until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Uživatelské jméno'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'customer'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts:4:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T12:21:15.435Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\test-results\\customerAddAdvice-test-webkit\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\janst\\OneDrive\\Documents\\Expertkom\\Expo\\css\\tests\\customerAddAdvice.spec.ts",
+                    "column": 14,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d4f8c498957b04a3cebc-794f5f86b19456bfc909",
+          "file": "customerAddAdvice.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2023-10-27T12:21:14.957Z",
+    "duration": 25055.975
+  }
+}

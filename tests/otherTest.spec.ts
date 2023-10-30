@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('http://172.16.17.100:8091/');
+  await page.goto('http://172.16.17.100:8091/Identity/Account/Login?returnUrl=/');
+  await page.getByLabel('Uživatelské jméno').click();
+  await page.getByLabel('Uživatelské jméno').fill('customer');
+  await page.getByLabel('Heslo').click();
+  await page.getByLabel('Heslo').fill('Heslo.1234');
+  await page.getByRole('button', { name: 'Přihlásit se' }).click();
+  await page.getByRole('button', { name: 'Brno' }).click();
+  await page.getByRole('link', { name: 'Praha' }).click();
+  await expect(page.getByRole('button', { name: 'Praha'})).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Brno'})).not.toBeVisible();  
+  await expect(page.getByRole('button', { name: 'Ostrava'})).not.toBeVisible();
+  await page.getByRole('button', { name: 'chevron_right' }).click();
+  await page.getByRole('button', { name: 'chevron_right' }).click();
+  await page.locator('div:nth-child(1) > .rz-events > div > .rz-event-content > div > div:nth-child(1)').first().click();
+  await page.getByLabel('Registrační značka').click();
+  await page.getByLabel('Registrační značka').fill('Liaz');
+  await page.getByLabel('Množství').click();
+  await page.getByLabel('Množství').fill('100');
+  await page.getByLabel('Číslo RKS / KS / číslo objednávky').click();
+  await page.getByLabel('Číslo RKS / KS / číslo objednávky').fill('112');
+  await page.getByLabel('Balení').click();
+  await page.getByLabel('Balení').fill('Korba');
+  await page.locator('label').nth(2).click();
+  await page.getByLabel('Měď').locator('div').nth(1).click();
+  await page.getByRole('button', { name: 'save Uložit' }).click();
+  await page.getByRole('button', { name: 'close Zavřít' }).click();
+});

@@ -1,0 +1,1426 @@
+:root {
+    --lightblue: rgba(0, 80, 255, 1);
+    --lightbluelight: rgba(178, 202, 255, 1);
+    --lightbluehover: rgba(76, 132, 255, 1);
+      --blue: rgba(21, 55, 105, 1);
+      --bluelight: rgba(91, 115, 150, 1);
+      --bluehover: rgba(185, 195, 210, 1);
+      --green: rgba(0, 237, 155, 1);
+      --greenhover: rgba(76, 242, 185, 1);
+      --pantone308: rgb(0, 115, 146);
+      --pantone7468: rgb(0, 112, 167);
+      --pantone7466: rgb(0, 160, 160);
+      --pantone7459: rgb(150, 200, 230);
+      --pantone-cool-gray: rgb(0, 112, 167);
+      --pantone465: rgb(210, 180, 120);
+      --pantone4505: rgb(144, 126, 63);
+      --pantone499: rgb(120, 70, 70);
+  }
+  
+  @font-face {
+    font-family: "Degular";
+    font-weight: 400;
+    src: url(fonts/Degular-Regular.woff) format("woff"), url(fonts/Degular-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "Degular";
+    font-weight: 600;
+    src: url(Degular-Semibold.woff) format("woff"), url(fonts/Degular-Semibold.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: "Degular";
+    font-weight: 700;
+    src: url(fonts/Degular-Bold.woff) format("woff"), url(fonts/Degular-Bold.woff2) format("woff2");
+  }
+  
+  body, h1, h2, h3, h4, h5, .ui.button, .ui.text.container, .ui.header, .ui.input input, .ui.input > input,
+  .ui.list .list > .item .header, .ui.list > .item .header, .ui.steps .step .title,
+  .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"],
+  .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"],
+  .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"], .ui.menu, .ui.message .header,
+  .ui.cards > .card > .content > .header, .ui.card > .content > .header, .ui.items > .item > .content > .header,
+  .ui.statistics .statistic > .value, .ui.statistic > .value, .ui.statistics .statistic > .label, .ui.statistic > .label,
+  .ui.accordion .title:not(.ui), .ui.modal > .header, .ui.popup > .header, .ui.search > .results .result .title,
+  .ui.search > .results > .message .header, .ui.category.search > .results .category > .name {
+    font-family: Degular, Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+      margin: 0;
+  }
+    
+  #content {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 10px !important;
+  }
+  
+  .expo .bg-primary {
+      background-color: var(--blue);
+  }
+  
+  .expo .bg-secondary {
+      background-color: var(--lightblue);
+  }
+  
+  .expo .bg-terciary {
+      background-color: var(--lightbluelight);
+  }
+  
+  .expo .bg-grey {
+    background-color: gray;
+  }
+  
+  .expo .bg-red {
+    background-color: red;
+  }
+  
+  .expo .primary {
+    color: var(--blue);
+  }
+  
+  .expo .secondary {
+    color: var(--lightblue);
+  }
+  
+  .expo .terciary {
+    color: var(--lightbluelight);
+  }
+  
+  .expo .grey {
+    color: var(--bluehover);
+  }
+  
+  .expo .red {
+    color: red;
+  }
+  
+  .expo .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .expo .text-md {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .expo .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  .expo .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  .expo h1,
+  .expo h1.primary,
+  .expo h2,
+  .expo h2.primary,
+  .expo h3,
+  .expo h3.primary,
+  .expo h4,
+  .expo h4.primary,
+  .expo h5,
+  .expo h5.primary {
+    color: var(--blue) !important;
+  }
+  
+  .expo h1.secondary,
+  .expo h2.secondary,
+  .expo h3.secondary,
+  .expo h4.secondary,
+  .expo h5.secondary {
+    color: var(--lightblue) !important;
+  }       
+  
+  .expo h1.terciary,
+  .expo h2.terciary,
+  .expo h3.terciary,
+  .expo h4.terciary,
+  .expo h5.terciary {
+    color: var(--lightbluelight) !important;
+  }
+  
+  .expo .phonewidget {
+    background-color: --lightblue
+    
+  }
+  
+  .expo .font-bold {
+    font-weight: bold;
+  }
+  
+  .expo .text-center {
+    text-align: center !important;
+  }
+  
+  .expo .text-left {
+    text-align: left !important;
+  }
+  
+  .expo .text-right {
+    text-align: right !important;
+  }
+  
+  .expo .ui.panel-blue {
+    background-color: var(--lightblue);
+    color: white;
+  }
+  
+  .expo .ui.panel-darkblue {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+  
+  .expo .ui.panel-blue > .ui.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expo .ui.grid.panel-blue > .row > .six.wide.column, 
+  .expo .ui.grid.panel-blue > .column.row > .six.wide.column, 
+  .expo .ui.grid.panel-blue > .six.wide.column, 
+  .expo .ui.column.grid.panel-blue > .six.wide.column, 
+  .expo .ui.form.panel-blue .six.wide.field,
+  .expo .ui.panel-blue .widget-panel {
+    width: auto !important;
+    padding: 0 !important;
+  }
+  
+  .expo .ui.grid > .row > .one.wide.column, 
+  .expo .ui.grid > .column.row > .one.wide.column, 
+  .expo .ui.grid > .one.wide.column, 
+  .expo .ui.column.grid > .one.wide.column, 
+  .expo .ui.form .one.wide.field,
+  .expo .ui.panel-blue .ui.wide {
+    padding: 0;
+    margin-right: 5px;
+  }
+  
+  .expo .ui.grid > .row > .ten.wide.column, 
+  .expo .ui.grid > .column.row > .ten.wide.column, 
+  .expo .ui.grid > .ten.wide.column, 
+  .expo .ui.column.grid > .ten.wide.column, 
+  .expo .ui.form .ten.wide.field {
+    width: 100% !important;
+  }
+  
+  .expo .ui.secondary.menu .dropdown.item, 
+  .expo .ui.secondary.menu .link.item, 
+  .expo .ui.secondary.menu a.item {
+    color: white;
+  }
+  
+  .expo .ui.secondary.menu .dropdown.item:hover, 
+  .expo .ui.secondary.menu .link.item:hover, 
+  .expo .ui.secondary.menu a.item:hover {
+    background: transparent;
+    color: white;
+  }
+  
+  .expo .ui.dropdown .menu {
+    right: 0 !important;
+  }
+  
+  .expo .ui.panel-blue .menu .item .icon-span-left {
+    font-size: 1.5rem;
+  }
+  
+  .expo .ui.panel-blue .logo {
+    margin: 0;
+  }
+  
+  .expo .ui.panel-blue .logo .widget-link {
+    width: 100% !important;
+  }
+  
+  .expo .ui.primary.button
+  .expo .ui.primary.buttons .button {
+      background-color: var(--green);
+      color: #000000;
+      text-shadow: none;
+      background-image: none;
+      border-radius: 9999px;
+  }
+  
+  
+  
+  .expo h1.primary {
+    font-size: 2em;
+    margin: 0.67em 0;
+    color: var(--lightblue);
+  }
+  
+  .expo h1.secondary {
+    font-size: 2em;
+    margin: 0.67em 0;
+    color: var(--blue);
+  }
+  
+  .expo pre.primary {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+    color: var(--lightblue);
+  }
+  
+  .expo pre.secondary {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+    color: var(--lightblue);
+  }
+  
+  .expo a,
+  .expo a.primary {
+      background-color: transparent;
+      /* 1 */
+      -webkit-text-decoration-skip: objects;
+      /* 2 */
+      color: var(--blue);
+    text-decoration: underline;
+  }
+  
+  .expo a.secondary {
+      background-color: transparent;
+      /* 1 */
+      -webkit-text-decoration-skip: objects;
+      /* 2 */
+      color: var(--blue);
+    text-decoration: underline;
+  }
+  
+  .expo a.grey {
+      background-color: transparent;
+      /* 1 */
+      -webkit-text-decoration-skip: objects;
+      /* 2 */
+      color: darkgray;
+    text-decoration: underline;
+  }
+  
+  .expo a:hover
+  .expo a.primary:hover {
+    color: var(--greenhover);
+    text-decoration: underline;
+  }
+  
+  .expo a.secondary:hover {
+    color: var(--bluehover);
+    text-decoration: underline;
+  }
+  
+  .expo a.grey:hover {
+    color: gray;
+    text-decoration: underline;
+  }
+  
+  .expo .ui.button,
+  .expo .ui.button.primary {
+    background-color: var(--blue);
+    border-radius: 9999px;
+    color: white;
+  }
+  
+  .expo .ui.button.secondary {
+    background-color: var(--blue);
+    border-radius: 9999px;
+    color: white;
+  }
+  
+  .expo .ui.button.violet {
+    background-color: #5829bb;
+    text-shadow: none;
+    border-radius: 9999px;
+    color: white;
+  }
+  
+  .expo .ui.button.red {
+    background-color: red;
+    border-radius: 9999px;
+    color: white;
+  }
+  
+  .expo .ui.button:hover,
+  .expo .ui.button.primary:hover {
+    background-color: var(--bluelight);
+    background-image: none;
+    -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+    box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+    color: white;
+  }
+  
+  .expo .ui.button.secondary:hover {
+    background-color: var(--bluelight);
+    background-image: none;
+    -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+    box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+    color: white;
+  }
+  
+  .expo .ui.button:focus,
+  .expo .ui.button.primary:focus {
+    background-color: var(--bluehover);
+    color: white;
+    background-image: '' !important;
+    -webkit-box-shadow: '' !important;
+    box-shadow: '' !important;
+  }
+  
+  .expo .ui.button.secondary:focus {
+    background-color: var(--bluehover);
+    color: white;
+    background-image: '' !important;
+    -webkit-box-shadow: '' !important;
+    box-shadow: '' !important;
+  }
+  
+  .expo .ui.button:active,
+  .expo .ui.button.primary:active,
+  .expo .ui.active.button:active,
+  .expo .ui.active.button.primary:active {
+    background-color: var(--bluelight);
+    background-image: '';
+    color: white;
+    -webkit-box-shadow: 0px 0px 0px 1px transparent inset, none;
+    box-shadow: 0px 0px 0px 1px transparent inset, none;
+  }
+  
+  .expo .ui.button.secondary:active,
+  .expo .ui.active.button.secondary:active {
+    background-color: var(--bluehover);
+    background-image: '';
+    color: white;
+    -webkit-box-shadow: 0px 0px 0px 1px transparent inset, none;
+    box-shadow: 0px 0px 0px 1px transparent inset, none;
+  }
+  
+  .expo .ui.active.button,
+  .expo .ui.active.button.primary {
+    background-color: var(--greenhover);
+    color: black;
+    border-radius: 9999px;
+    background-image: none;
+    -webkit-box-shadow: 0px 0px 0px 1px transparent inset;
+    box-shadow: 0px 0px 0px 1px transparent inset;
+  }
+  
+  .expo .ui.active.button.secondary {
+    background-color: var(--bluehover);
+    color: white;
+    border-radius: 9999px;
+    background-image: none;
+    -webkit-box-shadow: 0px 0px 0px 1px transparent inset;
+    box-shadow: 0px 0px 0px 1px transparent inset;
+  }
+  
+  .expo .ui.active.button:hover,
+  .expo .ui.active.button.primary:hover {
+    background-color: var(--greenhover);
+    background-image: none;
+    color: black;
+  }
+  
+  .expo .ui.active.button.secondary:hover {
+    background-color: var(--bluehover);
+    background-image: none;
+    color: white;
+  }
+  
+  .expo .ui.active.button:active,
+  .expo .ui.active.button.primary:active {
+    background-color: var(--greenhover);
+    background-image: none;
+    color: black;
+  }
+  
+  .expo .ui.active.button.secondary:active {
+    background-color: var(--bluehover);
+    background-image: none;
+  }
+  
+  .expo .ui.primary.buttons .button,
+  .expo .ui.primary.button {
+    background: #00ED9B;
+    border-radius: 12px;
+    padding: 17px 30px 17px;
+    color: #153769;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .expo .ui.buttons.secondary .button,
+  .expo .ui.button.secondary {
+    background: #153769;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 12px 10px;
+  }
+  
+  .expo .ui.terciary.buttons .button,
+  .expo .ui.terciary.button {
+    background-color: #8C66FF;
+    border-radius: 12px;
+    padding: 17px 30px 17px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .expo .ui.buttons.primary .button:hover,
+  .expo .ui.button.primary:hover {
+    background: #4CF2B9;
+    color: #153769;
+  }
+  
+  .expo .ui.buttons.secondary .button:hover,
+  .expo .ui.button.secondary:hover {
+    background-color: var(--bluelight);
+    color: white;
+    text-shadow: none;
+  }
+  
+  .expo .ui.buttons.terciary .button:hover,
+  .expo .ui.button.terciary:hover {
+    background-color: #AE94FF;
+    color: white;
+    text-shadow: none;
+  }
+  
+  .expo .ui.buttons.primary .button:focus,
+  .expo .ui.button.primary:focus {
+    background-color: var(--greenhover);
+    color: black;
+    text-shadow: none;
+  }
+  
+  .expo .ui.buttons.secondary .button:focus,
+  .expo .ui.button.secondary:focus {
+    background-color: var(--bluelight);
+    color: white;
+    text-shadow: none;
+  }
+  
+  .expo .ui.buttons.terciary .button:focus,
+  .expo .ui.button.terciary:focus {
+    background-color: #AE94FF;
+    color: white;
+    text-shadow: none;
+  }
+  
+  /*
+  .expo .ui.buttons.terciary .button:disable,
+  .expo .ui.button.terciary:disable {
+    background-color: black!important;
+    color: white;
+    text-shadow: none;
+  }
+  */
+  /*
+    Input
+  */
+  
+  .expo .ui.input
+  .expo .ui.input.primary {
+    color: var(--lightblue);
+  }
+  
+  .expo .ui.input.secondary {
+    color: var(--blue);
+  }
+  
+  .ui.input > input
+  .ui.input > input.primary {
+    -webkit-tap-highlight-color: var(--lightbluelight);
+    text-align: center;
+    background: var(--lightbluelight);
+    border: 1px solid white;
+    border-bottom: 2px solid var(--lightbluehover);
+    color: var(--lightblue);
+    border-radius: 0;
+  }
+  
+  .ui.input > input.secondary {
+    -webkit-tap-highlight-color: var(--lightbluelight);
+    text-align: center;
+    background: var(--lightbluelight);
+    border: 1px solid white;
+    border-bottom: 2px solid var(--lightbluehover);
+    color: var(--blue);
+    border-radius: 0;
+  }
+  
+  .expo .ui.input > input::-webkit-input-placeholder,
+  .expo .ui.input > input.primary::-webkit-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input > input.secondary::-webkit-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input > input::-moz-placeholder,
+  .expo .ui.input > input.primary::-moz-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input > input.secondary::-moz-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input > input:-ms-input-placeholder,
+  .expo .ui.input > input.primary:-ms-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input > input.secondary:-ms-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.form .widget>input[type="text"]:focus,
+  .expo .ui.form .widget.focused>.ui.input:not(.labeled)>input:focus{
+    border: 1px solid #BCD0FB!important;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5)!important;
+  }
+  
+  
+  .ui.form input:not([type]):focus, .ui.form input[type=date]:focus, .ui.form input[type=datetime-local]:focus, .ui.form input[type=email]:focus, .ui.form input[type=file]:focus, .ui.form input[type=number]:focus, .ui.form input[type=password]:focus, .ui.form input[type=search]:focus, .ui.form input[type=tel]:focus, .ui.form input[type=text]:focus, .ui.form input[type=time]:focus, .ui.form input[type=url]:focus  {
+    border: 1px solid #BCD0FB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5);
+    border-radius: 8px;
+  } 
+  
+  .expo .ui.form .focused .ui.labeled.input {
+    border: 1px solid #BCD0FB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5);
+    border-radius: 8px;
+  }
+  
+  
+  .expo .ui.input.focus > input.secondary,
+  .expo .ui.input > input.secondary:focus {
+    border: 1px solid white;
+    border-radius: 0;
+    background: var(--lightbluelight);
+    color: var(--blue);
+  }
+  
+  .expo .ui.input.focus > input::-webkit-input-placeholder,
+  .expo .ui.input.focus > input.primary::-webkit-input-placeholder,
+  .expo .ui.input > input:focus::-webkit-input-placeholder,
+  .expo .ui.input > input.primary:focus::-webkit-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input.focus > input.secondary::-webkit-input-placeholder,
+  .expo .ui.input > input.secondary:focus::-webkit-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input.focus > input::-moz-placeholder,
+  .expo .ui.input.focus > input.primary::-moz-placeholder,
+  .expo .ui.input > input:focus::-moz-placeholder,
+  .expo .ui.input > input:focus.primary::-moz-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input.focus > input.secondary::-moz-placeholder,
+  .expo .ui.input > input.secondary:focus::-moz-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input.focus > input:-ms-input-placeholder,
+  .expo .ui.input.focus > input.primary:-ms-input-placeholder,
+  .expo .ui.input > input:focus:-ms-input-placeholder,
+  .expo .ui.input > input.primary:focus:-ms-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.input.focus > input.secondary:-ms-input-placeholder,
+  .expo .ui.input > input.secondary:focus:-ms-input-placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.loading.loading.input>i.icon:before,
+  .expo .ui.loading.loading.input.primary>i.icon:before {
+    border: .2em solid #767676;
+  }
+  
+  .expo .ui.loading.loading.input.secondary>i.icon:before {
+    border: .2em solid #767676;
+  }
+  
+  .expo .ui.loading.loading.input>i.icon:after,
+  .expo .ui.loading.loading.input.primary>i.icon:after {
+    border-color: white transparent transparent;
+  }
+  
+  .expo .ui.loading.loading.input.secondary>i.icon:after {
+    border-color: white transparent transparent;
+  }
+  
+  .expo .ui.icon.input>i.icon:after, .ui.icon.input>i.icon:before,
+  .expo .ui.icon.input.primary>i.icon:after, .ui.icon.input.primary>i.icon:before {
+    color: var(--lightblue);
+  }
+  
+  .expo .ui.icon.input.secondary>i.icon:after, .ui.icon.input.secondary>i.icon:before {
+    color: var(--blue);
+  }
+  
+  .expo .ui.form input[type="text"],
+  .expo .ui.form input[type="text"].primary {
+    -webkit-tap-highlight-color: var(--lightbluelight);
+    text-align: center;
+    background: white;
+    border: 1px solid #D1D6DE;
+    color: #153769;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  
+  .expo .ui.form input[type="text"].font-bold {
+    font-weight: 700;
+  }
+  
+  .expo .ui.form input[type="text"].secondary {
+    -webkit-tap-highlight-color: var(--bluehover);
+    text-align: center;
+    background: white;
+    border: 1px solid #D1D6DE;
+    color: #153769;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  
+  .ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
+    -webkit-tap-highlight-color: var(--lightbluelight);
+    text-align: center;
+    background: white;
+    border: 1px solid #D1D6DE;
+    color: #153769;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  
+  .expo .ui.label,
+  .expo .ui.label.primary {
+    border-radius: 8px;
+    background-color: white;
+    color: #153769;
+    display: flex;
+    align-items: center;
+    border: 1px solid #D1D6DE;
+  }
+  
+  .ui[class*="right labeled"].input>input+.label {
+    border-left: none;
+  }
+  
+  .ui[class*="right labeled"].input>input:focus {
+    border-right-color: white!important;
+  }  
+  
+  .expo .ui.label.secondary {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+  .ui.active.label,
+  .ui.active.label.primary {
+    background-color: var(--lightblue);
+    color: white;
+  }
+  
+  .ui.active.label.secondary {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+  .ui.dropdown .ui.label > a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .rangeslider-horizontal {
+    background: #F0F0F5;
+    border-radius: 4px;
+  }
+  
+  .rangeslider .rangeslider__handle {
+    background: #FFFFFF;
+    border: 1px solid #0051FF;
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  }  
+  
+  .expo .slider .rangeslider-horizontal .rangeslider__fill,
+  .expo .slider.primary .rangeslider-horizontal .rangeslider__fill {
+    background: #0051FF;
+    border-radius: 4px;
+  }
+  
+  .rangeslider-horizontal .rangeslider__handle:after {
+    display: none;
+  }  
+  
+  .expo .ui.dropdown a {
+    text-decoration: none;
+  }
+  
+  .expo .ui.checkbox .box:before, .expo .ui.checkbox label:before {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .expo .ui.checkbox .box:after, .ui.checkbox label:after {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+  }
+  
+  .expo .ui.checkbox input:checked~.box:before, 
+  .expo .ui.checkbox input:checked~label:before,
+  .expo .ui.checkbox.primary input:checked~.box:before, 
+  .expo .ui.checkbox.primary input:checked~label:before {
+    background-color: white;
+    border: 1px solid var(--lightbluelight);
+  }
+  
+  .expo .ui.checkbox.secondary input:checked~.box:before, 
+  .expo .ui.checkbox.secondary input:checked~label:before {
+    background-color: white;
+    border: 1px solid var(--lightblue);
+  }
+  
+  .expo .ui.checkbox input:checked~.box:after, 
+  .expo .ui.checkbox input:checked~label:after,
+  .expo .ui.checkbox.primary input:checked~.box:after, 
+  .expo .ui.checkbox.primary input:checked~label:after {
+    color: var(--lightblue);
+  }
+  
+  .expo .ui.checkbox input:checked:focus~.box:after, 
+  .expo .ui.checkbox input:checked:focus~label:after, 
+  .expo .ui.checkbox input:not([type=radio]):indeterminate:focus~.box:after, 
+  .expo .ui.checkbox input:not([type=radio]):indeterminate:focus~label:after,
+  .expo .ui.checkbox.primary input:checked:focus~.box:after, 
+  .expo .ui.checkbox.primary input:checked:focus~label:after, 
+  .expo .ui.checkbox.primary input:not([type=radio]):indeterminate:focus~.box:after, 
+  .expo .ui.checkbox.primary input:not([type=radio]):indeterminate:focus~label:after {
+    color: var(--lightblue);
+  }
+  
+  .expo .ui.checkbox.secondary input:checked:focus~.box:after, 
+  .expo .ui.checkbox.secondary input:checked:focus~label:after, 
+  .expo .ui.checkbox.secondary input:not([type=radio]):indeterminate:focus~.box:after, 
+  .expo .ui.checkbox.secondary input:not([type=radio]):indeterminate:focus~label:after {
+    color: var(--lightblue);
+  }
+  
+  .expo .ui.checkbox input:checked:focus~.box:before, 
+  .expo .ui.checkbox input:checked:focus~label:before, 
+  .expo .ui.checkbox input:not([type=radio]):indeterminate:focus~.box:before, 
+  .expo .ui.checkbox input:not([type=radio]):indeterminate:focus~label:before,
+  .expo .ui.checkbox.primary input:checked:focus~.box:before, 
+  .expo .ui.checkbox.primary input:checked:focus~label:before, 
+  .expo .ui.checkbox.primary input:not([type=radio]):indeterminate:focus~.box:before, 
+  .expo .ui.checkbox.primary input:not([type=radio]):indeterminate:focus~label:before {
+    border: 1px solid #BCD0FB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5);
+  }
+  
+  .expo .ui.checkbox.secondary input:checked:focus~.box:before, 
+  .expo .ui.checkbox.secondary input:checked:focus~label:before, 
+  .expo .ui.checkbox.secondary input:not([type=radio]):indeterminate:focus~.box:before, 
+  .expo .ui.checkbox.secondary input:not([type=radio]):indeterminate:focus~label:before {
+    border: 1px solid #BCD0FB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5);
+  }
+  
+  .expo .ui.checkbox input:focus~.box:before, 
+  .expo .ui.checkbox input:focus~label:before,
+  .expo .ui.checkbox.primary input:focus~.box:before, 
+  .expo .ui.checkbox.primary input:focus~label:before {
+    border: 1px solid #BCD0FB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5);
+  }
+  
+  .expo .ui.checkbox.secondary input:focus~.box:before, 
+  .expo .ui.checkbox.secondary input:focus~label:before {
+    border: 1px solid #BCD0FB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px rgba(178, 202, 255, 0.5);
+  }
+  
+  /* .expo .primary input:focus {
+    border-color: var(--blue);
+  }
+  
+  .expo .secondary input:focus {
+    border-color: var(--lightblue);
+  } */
+  
+  /* .expo .ui.selection.dropdown:hover,
+  .expo .ui.selection.dropdown.primary:hover {
+    border-color: var(--lightblue);
+  }
+  
+  .expo .ui.selection.dropdown.secondary:hover {
+    border-color: var(--blue);
+  } */
+  
+  /* .expo .ui.selection.dropdown:focus,
+  .expo .ui.selection.dropdown.primary:focus {
+    border-color: var(--lightbluehover);
+  }
+  
+  .expo .ui.selection.dropdown.secondary:focus {
+    border-color: var(--bluehover);
+  } */
+  
+  .expo .ui.selection.dropdown:focus .menu,
+  .expo .ui.selection.dropdown.primary:focus .menu {
+    border-color: var(--lightbluehover);
+  }
+  
+  .expo .ui.selection.dropdown.secondary:focus .menu {
+    border-color: var(--bluehover);
+  }
+  
+  /* .expo .ui.form input:not([type]):focus, 
+  .expo .ui.form input[type=date]:focus, 
+  .expo .ui.form input[type=datetime-local]:focus, 
+  .expo .ui.form input[type=email]:focus, 
+  .expo .ui.form input[type=file]:focus, 
+  .expo .ui.form input[type=number]:focus, 
+  .expo .ui.form input[type=password]:focus,
+  .expo .ui.form input[type=search]:focus, 
+  .expo .ui.form input[type=tel]:focus, 
+  .expo .ui.form input[type=text]:focus, 
+  .expo .ui.form input[type=time]:focus, 
+  .expo .ui.form input[type=url]:focus,
+  .expo .ui.form input.primary:not([type]):focus, 
+  .expo .ui.form input.primary[type=date]:focus, 
+  .expo .ui.form input.primary[type=datetime-local]:focus, 
+  .expo .ui.form input.primary[type=email]:focus, 
+  .expo .ui.form input.primary[type=file]:focus, 
+  .expo .ui.form input.primary[type=number]:focus, 
+  .expo .ui.form input.primary[type=password]:focus,
+  .expo .ui.form input.primary[type=search]:focus, 
+  .expo .ui.form input.primary[type=tel]:focus, 
+  .expo .ui.form input.primary[type=text]:focus, 
+  .expo .ui.form input.primary[type=time]:focus, 
+  .expo .ui.form input.primary[type=url]:focus {
+    border-color: var(--lightblue);
+  }
+  
+  .expo .ui.form input.secondary:not([type]):focus, 
+  .expo .ui.form input.secondary[type=date]:focus, 
+  .expo .ui.form input.secondary[type=datetime-local]:focus, 
+  .expo .ui.form input.secondary[type=email]:focus, 
+  .expo .ui.form input.secondary[type=file]:focus, 
+  .expo .ui.form input.secondary[type=number]:focus, 
+  .expo .ui.form input.secondary[type=password]:focus,
+  .expo .ui.form input.secondary[type=search]:focus, 
+  .expo .ui.form input.secondary[type=tel]:focus, 
+  .expo .ui.form input.secondary[type=text]:focus, 
+  .expo .ui.form input.secondary[type=time]:focus, 
+  .expo .ui.form input.secondary[type=url]:focus {
+    border-color: var(--blue);
+  } */
+  
+  .expo .ui.radio.checkbox .box:before, 
+  .expo .ui.radio.checkbox label:before,
+  .expo .ui.radio.checkbox.primary .box:before, 
+  .expo .ui.radio.checkbox.primary label:before {
+    border-color: var(--lightblue);
+  }
+  
+  .expo .ui.radio.checkbox.secondary .box:before, 
+  .expo .ui.radio.checkbox.secondary label:before {
+    border-color: var(--lightbluelight);
+  }
+  
+  .expo .ui.radio.checkbox .box, 
+  .expo .ui.radio.checkbox label {
+    padding-top: 3px;
+  }
+  
+  .expo .ui.radio.checkbox:focus,
+  .expo .ui.radio.checkbox.primary:focus {
+    border-color: var(--lightblue);
+  }
+  
+  .expo .ui.radio.checkbox.secondary:focus {
+    border-color: var(--lightbluelight);
+  }
+  
+  .expo .ui.radio.checkbox .box:after, 
+  .expo .ui.radio.checkbox label:after,
+  .expo .ui.radio.checkbox.primary .box:after, 
+  .expo .ui.radio.checkbox.primary label:after {
+    width: 20px;
+    height: 20px;
+    background-color: var(--lightblue) !important;
+  }
+  
+  .expo .ui.radio.checkbox.secondary .box:after, 
+  .expo .ui.radio.checkbox.secondary label:after {
+    width: 20px;
+    height: 20px;
+    background-color: var(--lightbluelight) !important;
+  }
+  
+  .expo .ui.checkbox.radio input:checked~.box:before, 
+  .expo .ui.checkbox.radio input:checked~label:before,
+  .expo .ui.checkbox.radio.primary input:checked~.box:before, 
+  .expo .ui.checkbox.radio.primary input:checked~label:before {
+    border-color: var(--lightblue);
+  }
+  
+  .expo .ui.checkbox.radio.secondary input:checked~.box:before, 
+  .expo .ui.checkbox.radio.secondary input:checked~label:before {
+    border-color: var(--lightbluelight);
+  }
+  
+  .expo .ui.dropdown .menu .selected.item, 
+  .expo .ui.dropdown.selected,
+  .expo .ui.dropdown.primary .menu .selected.item, 
+  .expo .ui.dropdown.primary.selected {
+    background-color: var(--lightblue);
+    color: white;
+  }
+  
+  .expo .ui.dropdown.secondary .menu .selected.item, 
+  .expo .ui.dropdown.secondary.selected {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+  .expo .ui.dropdown .menu .selected.item:hover,
+  .expo .ui.dropdown.selected:hover
+  .expo .ui.dropdown.primary .menu .selected.item:hover,
+  .expo .ui.dropdown.primary.selected:hover {
+    background-color: var(--lightblue);
+    color: white;
+  }
+  
+  .expo .ui.dropdown.secondary .menu .selected.item:hover,
+  .expo .ui.dropdown.secondary.selected:hover {
+    background-color: var(--blue);
+    color: white;
+  }
+  
+  .expo .ui.dropdown .menu>.item:hover,
+  .expo .ui.dropdown.primary .menu>.item:hover {
+    background-color: var(--lightbluelight);
+  }
+  
+  .expo .ui.dropdown.secondary .menu>.item:hover {
+    background-color: var(--bluelight);
+  }
+  
+  .expo .ui.form .field>label,
+  .expo .ui.form.primary .field>label {
+    text-align: left!important;
+    color: #153769;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px rgba(178, 202, 255, 0.5);
+  }
+  
+  .expo .ui.form .field>label.error,
+  .expo .ui.form.primary .field>label.error {
+    color: #F04438;
+  }
+  
+  .expo .ui.form input[type="text"]::placeholder,
+  .expo .ui.form input[type="text"].primary::placeholder {
+    color: #5B7396;
+  }
+  
+  .expo .ui.selection.dropdown,
+  .expo .ui.selection.dropdown.primary {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #153769;
+    background: #FFFFFF;
+    border: 1px solid #D1D6DE;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 10px 2.1em 10px 1em;
+  }
+  
+  .expo .ui.dropdown>.dropdown.icon:before {
+    content: '\f078';
+    color: #5B7396;
+  }
+  
+  .expo .ui.dropdown.label>.dropdown.icon:before {
+    content: '\f078';
+    color: white;
+  }
+  
+  .expo .ui.selection.dropdown>.delete.icon, 
+  .expo .ui.selection.dropdown>.dropdown.icon, 
+  .expo .ui.selection.dropdown>.search.icon {
+    font-size: 0.9rem;
+    padding: 1rem;
+  } 
+  
+  .expo .ui.dropdown>.dropdown.icon {
+    font-family: 'Icons';
+  }
+  
+  .expo .ui.selection.active.dropdown {
+    border: 1px solid var(--lightblue);
+  }
+  
+  /* .expo .ui.selection.active.dropdown .menu {
+    z-index: 12;
+  } */
+  
+  .expo .ui.form textarea {
+    -webkit-tap-highlight-color: var(--lightbluelight);
+    background: white;
+    border: 1px solid #D1D6DE;
+    color: #153769;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  
+  .expo .ui.selection.visible.dropdown>.text:not(.default) {
+    color: var(--blue);
+  }
+  
+  .expo .ui.dropdown a {
+    color: var(--blue);
+  }
+  
+  .expo .ui.form input[type="text"], .expo .ui.form input[type="text"].primary {
+    text-align: left;
+  }
+  
+  .expo .ui.widget-textbox,
+  .expo .ui.widget-combobox,
+  .expo .ui.widget-datebox {
+    margin-top: 10px !important;
+  }
+  
+  .expo .ui.widget-textbox.text-left input,
+  .expo .ui.widget-combobox.text-left input,
+  .expo .ui.widget-datebox.text-left input {
+    text-align: left !important;
+  }
+  
+  .expo .ui.widget-textbox.text-center input,
+  .expo .ui.widget-combobox.text-center input,
+  .expo .ui.widget-datebox.text-center input {
+    text-align: center !important;
+  }
+  
+  .expo .ui.widget-textbox.text-right input,
+  .expo .ui.widget-combobox.text-right input,
+  .expo .ui.widget-datebox.text-right input {
+    text-align: right !important;
+  }
+  
+  .expo .ui.widget-textbox.font-bold input,
+  .expo .ui.widget-combobox.font-bold input,
+  .expo .ui.widget-datebox.font-bold input {
+    font-weight: bold !important;
+  }
+  
+  .expo .ui.form .inline.field:not(.widget-checkbox):not(.widget-icon):not(.widget-label):not(.widget-link):not(.textmode)>label.editable {
+    margin-top: 12px;
+  }
+  
+  /* .expo .ui.toggle.checkbox input:checked~.box:before, 
+  .expo .ui.toggle.checkbox input:checked~label:before {
+    width: 3.5rem;
+    height: 1.5rem;
+  }
+  
+  .expo .ui.toggle.checkbox input~.box:before, 
+  .expo .ui.toggle.checkbox input~label:before {
+    width: 3.5rem;
+    height: 1.5rem;
+  } */
+  
+  .expo .ui.toggle.checkbox .box:before, 
+  .expo .ui.toggle.checkbox label:before {
+    background-color: #F2F4F7;
+    border: none !important;
+    width: 4rem !important;
+    height: 1.8rem !important;
+    margin-top: -0.2rem;
+    margin-left: -0.2rem;
+  }
+  
+  .expo .ui.toggle.checkbox .box:hover::before, 
+  .expo .ui.toggle.checkbox label:hover::before {
+    background-color: #EAECF0;
+  }
+  
+  .expo .ui.toggle.checkbox input:checked~.box:before, 
+  .expo .ui.toggle.checkbox input:checked~label:before {
+    background-color: var(--blue)!important;
+  }
+  
+  .ui.toggle.checkbox input~label:after {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+  }
+  
+  .expo .ui input[type="text"] {
+    background-color: white;
+    color: var(--blue);
+  }
+  
+  .expo .ui.valued input[type="text"] {
+    color: var(--blue);
+  }
+  
+  .ui.icon.input>i.icon {
+    opacity: 1;
+  }
+  
+  .expo .ui .ui.icon.input>i.icon:before {
+    color: #5B7396;
+  }
+  
+  .expo .ui.valued .ui.icon.input>i.icon:before {
+    color: #5B7396;
+  }
+  
+  .expo .ui.button.widget-radiobutton, 
+  .expo .ui.button.primary.widget-radiobutton {
+    border-radius: 9999px !important;
+    padding: 10px;
+    background-color: var(--blue);
+    border: 1px solid var(--bluehover);
+    margin: 0 10px;
+  }
+  
+  .expo .ui.active.button.widget-radiobutton, 
+  .expo .ui.active.button.primary.widget-radiobutton {
+    background-color: var(--lightblue);
+    border-radius: 9999px;
+  }
+  
+  .expo .ui.button.widget-radiobutton > .radio > label {
+    color: var(--white);
+    border-radius: 9999px;
+  }
+  
+  .expo .ui.button.widget-radiobutton.active > .radio > label {
+    color: white;
+  }
+  
+  .expo .ui.button.widget-radiobutton.active:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: var(--lightblue);
+    position: absolute;
+    left: calc(50% - 25px);
+    bottom: -15px;
+    clip-path: polygon(0px 0px, 50px 50px, 50px 0px) !important;
+    transform: rotate(135deg);
+  }
+  
+  .expo .ui.default.dropdown:not(.button)>.text, 
+  .expo .ui.dropdown:not(.button)>.default.text {
+    color: var(--bluehover);
+  }
+  
+  .ui.form .field.error input:not([type]), .ui.form .field.error input[type=date], .ui.form .field.error input[type=datetime-local], 
+  .ui.form .field.error input[type=password], .ui.form .field.error input[type=search], .ui.form .field.error input[type=tel], 
+  .ui.form .field.error input[type=email], .ui.form .field.error input[type=file], .ui.form .field.error input[type=number], 
+  .ui.form .field.error input[type=text], .ui.form .field.error input[type=time], .ui.form .field.error input[type=url], 
+  .ui.form .field.error select, .ui.form .field.error textarea {
+    border: 1px solid #FDA29B;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    background: white;
+    color: #153769;
+  }
+  
+  .ui.form .field.error input:not([type]):focus, .ui.form .field.error input[type=date]:focus, .ui.form .field.error input[type=datetime-local]:focus, 
+  .ui.form .field.error input[type=email]:focus, .ui.form .field.error input[type=file]:focus, .ui.form .field.error input[type=number]:focus, 
+  .ui.form .field.error input[type=password]:focus, .ui.form .field.error input[type=search]:focus, .ui.form .field.error input[type=tel]:focus, 
+  .ui.form .field.error input[type=text]:focus, .ui.form .field.error input[type=time]:focus, .ui.form .field.error input[type=url]:focus, 
+  .ui.form .field.error select:focus, .ui.form .field.error textarea:focus {
+    border: 1px solid #FDA29B;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    background: white;
+    color: #153769;
+  }
+  
+  .ui.form .field.error .ui.icon.input i.icon:before {
+    color: #FDA29B;
+  }
+  
+  .ui.form .field.warning input:not([type]), .ui.form .field.warning input[type=text], .ui.form .field.warning textarea {
+    background: white;
+    border-color: var(--lightblue);
+    color: #153769;
+    -webkit-box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+  }
+  
+  .expo .segment {
+    cursor: pointer;
+  }
+  
+  .expo .ui.personalID-front .ui.button.upload-button {
+    background-image: url("app/static/images/idcard/idcard-front.jpg");
+    min-width: 250px;
+    min-height: 150px;
+    border-radius: 10px;
+    background-size: cover
+  }
+  
+  .expo .ui.personalID-front .ui.button.upload-button .photo.icon,
+  .expo .ui.personalID-back .ui.button.upload-button .photo.icon {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 25px);
+  }
+  
+  .expo .ui.personalID-front .ui.button.upload-button .photo.icon:before,
+  .expo .ui.personalID-back .ui.button.upload-button .photo.icon:before {
+    font-size: 2rem;
+  }
+  
+  .expo .ui.personalID-back .ui.button.upload-button {
+    background-image: url("app/static/images/idcard/idcard-back.jpg");
+    min-width: 250px;
+    min-height: 150px;
+    border-radius: 10px;
+    background-size: cover;
+  }
+  
+  .expo .secondary.font-bold > i{
+    color: var(--lightblue)!important;
+  }
+  
+  .expo .primary.font-bold > i{
+    color: var(--lightblue)!important;
+  }
+  
+  .expo .editable > i{
+    color: var(--lightblue)!important;
+  }
+  
+  .expo .ui.checkbox label {
+    color: var(--blue);
+  }
+  
+  .ui.column.segment:not(.inverted):not(.secondary):not(.tertiary) {
+    background-color: #F0F0F5!important;
+    border-radius: 12px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .ui.column.segment.transparent:not(.inverted):not(.secondary):not(.tertiary) {
+    background: none!important;
+    border: 1px solid rgba(34,36,38,.15);
+    box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  }
+  
+  .expo .ui.column.segment:not(.inverted):not(.secondary):not(.tertiary).selected {
+    border: 3px solid var(--blue)!important;
+  }
+  
+  .panel-darkblue .ui.divider:not(.vertical):not(.horizontal) {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  .panel-darkblue .primary-blue, .panel-darkblue h5.primary-blue {
+    color: #4C84FF!important;
+  }
+  
+  .panel-darkblue a {
+    text-decoration: none;
+    color: #B2CAFF;
+  }
+  
+  
+  .panel-darkblue a:hover {
+    text-decoration: underline;
+  }
+  
+  span.rstar {
+    color: #F04438;;
+  }
+  
+  .ui.grid>.column.no-padding-top-bottom:not(.row) {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+  }
+  
+  .ui.grid>.column.no-padding-top-bottom:not(.row) .ui.grid.segment {
+    margin: 0.7rem 0;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ui.grid>.column.no-padding-top-bottom:not(.row) .ui.grid.segment {
+      margin: 0px 0px;
+    }
+    .ui.stackable.grid > .row > .wide.column.widget-panel {
+      padding-top: 0px!important;
+      padding-bottom: 0px!important;
+    }
+  }
+  
+  .ui.form.expo .field input:-webkit-autofill,
+  .ui.form.expo .field input:-webkit-autofill:hover, 
+  .ui.form.expo .field input:-webkit-autofill:focus {
+    background: white!important;
+    background-color: white!important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
+    border-color: #D1D6DE!important;
+  }
+  
+  .ui.form.expo .field input:-internal-autofill-selected {
+    background: white!important;
+    background-color: white!important;
+     -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
+    border-color: #D1D6DE!important;
+  }
